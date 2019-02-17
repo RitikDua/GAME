@@ -1,0 +1,520 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script >
+var p1=0,p2=0,count1=0,turn=0;
+if(turn==0)
+{
+	$(".countp1").addClass("countp1");
+}
+
+var pn1=prompt("Enter Player 1 name");
+var pn2=prompt("Enter Player 2 name");
+$(document).ready(function(){
+	 $("#pn1").text(pn1);
+	 $("#pn2").text(pn2);
+	 $("#slide").hide(); 
+	$("#right").click(function(){
+
+		$("#ball").animate({left:'+=36px'});
+		count1+=1;
+
+		$(".countp1").val(count1);
+		check();
+	});
+		$("#bottom").click(function(){
+		$("#ball").animate({top:'+=36px'});
+		count1+=1;
+		$(".countp1").val(count1);
+		check();
+	});
+	$("#up").click(function(){
+		$("#ball").animate({top:'-=36px'});
+		count1+=1;
+		$(".countp1").val(count1);
+		check();
+	});
+	$("#left").click(function(){
+		$("#ball").animate({left:'-=36px'});
+		count1+=1;
+		$(".countp1").val(count1);
+		check();
+	});
+
+$("#reset").click(function(){
+  x=0;
+  y=0;
+  count1=0;
+  turn=0;
+  ///p1=0;
+  //p2=0;
+   $("#ball").animate({
+	    left:'3px'//right:'+=760px'
+	 });
+	 $("#ball").animate({
+	    top:'3px'
+	 });
+	 alert("Reset Successful!");
+	 $("#p2").removeClass("countp1");
+	 $("#p1").addClass("countp1");
+	 $("#display").val("PLAYER 1");
+	 $("#slide").hide();
+	 $("#p1").val("0");
+	 $("#p2").val("0");
+ });
+function check(){
+	if(turn==0)
+	{
+	if($("#ball").css("left")>='950px'&&$("#ball").css("top")>='530px')
+		{alert(pn2+" turn");
+			$("#p1").val(count1);
+			$("#p1").removeClass("countp1");
+
+			$("#p1").removeClass("countp1");
+			$("#p2").addClass("countp1");
+			 $("#display").val("PLAYER 2");
+
+			turn=1;
+			count1=0;
+			$("#ball").animate({
+				left:'3px'
+			},"slow");
+			$("#ball").animate({
+				top:'3px'
+			},"slow");
+		//alert("win");}
+			if($("#ball").css("left")=='3px'){
+			player2();}}
+}
+else
+{
+	if($("#ball").css("left")>='950px'&&$("#ball").css("top")>='530px')
+	{
+		var score1=$("#p1").val();
+		var score2=$("#p2").val();
+		if(score1<score2)
+		{
+			//alert("");
+	 $("#display").text(pn1+" is winner");
+
+		}
+		else if(score1==score2)
+		{	  $("#display").text("DRAW!");
+
+	//	$("#display").val("DRAW!");
+    }
+		else
+		{	  $("#display").text(pn2+"is winner");
+
+	//$("#display").val("DRAW!");
+    	}	 $("#slide").slideDown("slow");
+
+	}	
+}}
+
+    })	;
+</script>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' >
+
+<style>
+body{background-image: url(bg5.jpg);
+}
+.container{
+	position:relative;
+	border-radius: 18px;
+border:3px solid rgba(12,12,12,0.9);	background-size:cover;
+	width:99%;
+	background-image: url(bg1.jpg);
+	background-color: rgba(101,200,112,0.9);
+	height:596px;
+	padding:0px;
+	size:cover;
+
+}
+.scoreboard{
+			border:3px solid rgba(12,12,12,0.9);
+			height:580px;
+			border-radius: 9px;
+			background:url(bg6.jpg);
+			background-opacity:0.6;
+
+			padding:10px;
+	}
+	h2{
+		font-family: helvetica;
+		font-size:34px;
+		margin-left:50px;
+		margin-top:0px;	}
+	.buttons{
+	margin-left:40px;
+	color:rgba(0,0,0,0);
+	}
+	fieldset{
+		box-shadow: 2px 2px 2px;
+			background-color: rgba(121,101,56,0.9);
+			border:3px solid;
+	}
+	legend{
+			color:black;
+			text-shadow:2px 2px 2px;
+		font-family:Helvetica;
+	}
+
+button:active{
+    -webkit-box-shadow: 0px 2px 0px black;
+    -moz-box-shadow: 0px 2px 0px black;
+    box-shadow: 0px 2px 0px black;
+    position:relative;
+    top:4px;
+}
+	h2{
+		background-color:rgba(121,222,121,0.6);
+		text-align:center;
+		margin-left: 5px;
+		text-shadow: 2px 2px 2px black;
+	color:rgba(222,180,111,1);
+outline:1px;}
+	button{
+		width:60px;
+		height: 53px;;
+	font-size: 33px;
+	outline:none;
+		box-shadow: 2px 2px 2px black;
+	border:0px;
+
+	color:white;
+	border-radius: 9px;
+background-color:rgba(100,181,153,0.9);}
+
+.blockR{
+	position:relative;
+	width:450px;
+
+	background-color: rgb(139,69,19);
+	height:13px;
+	left:0px;
+}	
+
+.blockU{
+	position:relative;
+	height:150px;
+	background-color:rgb(139,69,19);
+	width:13px;
+	left:437px;
+}	input p{
+		color:white;
+}
+p{
+	text-shadow:1px 1px 1px;
+}
+input{
+	border:0px;
+	outline:0px;
+	border-radius:18px;
+	padding:3px;
+	font-weight: bolder;
+}
+body{
+	
+position:relative;	background-size: cover;
+} 
+
+.ball{
+left:0px;
+top:0px;
+position: relative;
+	width:90px;
+}
+#block1{position:absolute;
+	left:513px;
+	top:0px;
+	height:130px;
+}
+#block3{
+	left:600px;
+top:160px;
+width:160px;
+position: absolute;
+}
+#block4{
+	left:600px;
+	top:60px;
+
+position: absolute;}
+
+#block6{
+position: absolute;
+	top:60px;
+	width:150px;
+	left:750px;
+}
+#block7{
+position: absolute;
+	left:890px;
+	top:0px;
+}
+#block8{position: absolute;
+	left:582px;
+		width:454px;
+		top:300px;}
+
+#block9{
+position: absolute;
+	left:437px;
+	top:200px;
+	width:176px;
+}
+#block10{
+	height:100px;
+	left:570px;
+	top:300px;
+	position: absolute;
+}
+#block11{
+	left:483px;
+	top:400px;
+	width:100px;
+	position: absolute;
+}
+#block12{
+	left:480px;
+	top:301px;
+
+	height:110px;
+	position: absolute;
+}
+#block13{
+	position: absolute;
+	left:333px;
+	top:300px;
+	width:160px;
+}
+#block14{
+	position: absolute;
+	left:330px;
+	top:210px;
+}
+#block15{
+position: absolute;
+left:100px;
+top:130px;
+width:200px;
+}
+#block16{
+	left:100px;
+	height:100px;
+	top:100px;
+	position: absolute;
+}
+#block17{width:100px;
+	left:240px;
+	top:240px;
+position: absolute;}
+
+#block18{width:113px;
+	left:00px;
+	top:190px;
+position: absolute;}
+#block19{
+	width:113px;
+left:100px;
+top:330px;
+position: absolute;;
+}
+#block20{
+	position: absolute;
+	top:300px;
+	left:100px;
+}
+#block21{
+	position: absolute;
+	left:00px;
+	top:440px;
+	width:113px;
+}
+#block22{
+	position: absolute;
+	left:450px;
+	top:400px;
+	width:50px;}
+	#block23{
+		position: absolute;
+		top:450px;
+		left:219px;
+		height:80px;
+	}
+	#block24{
+		position: absolute;
+		left:230px;
+		top:450px;
+		width:133px;
+	}
+	#block25{
+		position: absolute;
+		left:360px;
+		top:430px;
+		height:60px;
+	}
+	#block26{
+		position: absolute;
+		left:0px;
+		top:530px;
+	width:80px;}
+	#block27{
+		position: absolute;
+		left:470px;
+		height: 96px;
+		top:500px;
+	}
+	#block28{
+		position: absolute;
+		left:470px;
+		top:490px;
+		width:190px;
+	}
+	#block29{
+		position: absolute;
+		left:650px;
+		top:470px;
+		height:60px;
+	}
+	#block30{
+		position: absolute;
+		left:690px;
+		top:380px;
+		width: 150px;
+	}
+	#block31{
+		position: absolute;
+		left:750px;
+		height:130px;
+		top:390px;
+	}
+	#block32{
+		position: absolute;
+		left:890px;
+		top:460px;
+		width:100px;
+	}
+	#block33{
+		position: absolute;
+		left:700px;
+		top:583px;
+		width:100px;
+	}
+	#block{
+		left:430px;
+		height:132px;
+	}
+	#block0{
+		width:443px;
+	}
+	.dest{
+		width:60px;
+		height:60px;
+		position: absolute;
+		left:975px;
+		top:535px;
+		border-radius: 9px;
+		background-color: black;
+	}
+</style>
+</head>
+<body>
+	<div class="container" style="position: fixed;width:1035px;margin-top:30px">
+<img id="ball" class="ball" src="giphy.gif">
+<div class="blockR" id="block0" ></div>
+<div class="blockU" id="block"  ></div>
+
+<div class="blockU" id="block1"></div>
+
+<div class="blockR" id="block3"></div>
+<div class="blockU" id="block4"></div>
+<!--div class="blockR" id="block5"></div-->
+<div class="blockR" id="block6"></div>
+<div class="blockR" id="block8"></div>
+
+<div class="blockU" id="block7"></div>
+
+
+<div class="blockR" id="block9"></div>
+
+<div class="blockU" id="block10"></div>
+
+<div class="blockR" id="block11"></div>
+
+
+<div class="blockU" id="block12"></div>
+
+<div class="blockR" id="block13"></div>
+<div class="blockU" id="block14"></div>
+
+
+<div class="blockR" id="block15"></div>
+
+<div class="blockU" id="block16"></div>
+
+
+<div class="blockR" id="block17"></div>
+
+<div class="blockR" id="block18"></div>
+	
+
+<div class="blockR" id="block19"></div>
+
+<div class="blockU" id="block20"></div>
+	
+	
+<div class="blockR" id="block21"></div>
+<div class="blockR" id="block22"></div>
+<div class="blockU" id="block23"></div>
+<div class="blockR" id="block24"></div>
+<div class="blockU" id="block25"></div>
+<div class="blockR" id="block26"></div>
+	
+<div class="blockU" id="block27"></div>
+<div class="blockR" id="block28"></div>
+		
+<div class="blockU" id="block29"></div>
+	
+<div class="blockR" id="block30"></div>
+<div class="blockU" id="block31"></div>
+<div class="blockR" id="block32"></div>
+
+<div class="blockR" id="block33"></div>
+
+
+
+<div class="dest" id="dest"></div>
+
+
+
+
+
+	</div>
+<div class="scoreboard" style="margin-top:30px;position: fixed;margin-left: 77%;width:20%;">
+		<h2>Directions</h2>
+		<div class="buttons">
+<button style="margin-left:64px;margin-bottom:3px;"class="up" id="up"><i class='fas fa-chevron-up'></i></button>
+<br>
+<button class="left" id="left" style="margin-right:0px"><i class='fas fa-chevron-left'></i></button>
+<button class="bottom" id="bottom"><i class='fas fa-chevron-down'></i></button>
+<button class="right" id="right"><i class='fas fa-chevron-right'></i></button>
+	</div><br><br><br>
+	<div class="score">
+<fieldset>		<legend>SCORES</legend>
+		<p id="pn1">PLAYER 1</p>
+		<input type="text" id="p1" value="0" class="countp1" readonly>
+		<p id="pn2">PLAYER 2</p>
+		<input type="text" id="p2" value="0" readonly>
+		</fieldset></div>
+		<div id="slide" style="background-color: green;">
+		<h2 id="display"></h2>
+<button id="reset" style="width:250px;font-size:29px;margin-left:11px;">RESTART</button></div>
+</div>
+
+	</body>
+	</html>
