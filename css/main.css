@@ -1,313 +1,355 @@
 body {
-    background-image: url(bg5.jpg);
+    background-image: url('/assets/bg5.jpg');
 }
-.container {
-    position:relative;
-    border-radius: 18px;
-    border:3px solid rgba(12,12,12,0.9);
-    background-size:cover;
-    width:99%;
-    background-image: url(bg1.jpg);
-    background-color: rgba(101,200,112,0.9);
-    height:596px;
-    padding:0px;
-    size:cover;
-}
-.scoreboard {
-    border:3px solid rgba(12,12,12,0.9);
-    height:580px;
-    border-radius: 9px;
-    background:url(bg6.jpg);
-    background-opacity:0.6;
 
-    padding:10px;
+.container {
+    position: relative;
+    border-radius: 18px;
+    border: 3px solid rgba(12, 12, 12, 0.9);
+    background-size: cover;
+    width: 99%;
+    background-image: url('/assets/bg1.jpg');
+    background-color: rgba(101, 200, 112, 0.9);
+    height: 596px;
+    padding: 0px;
+    size: cover;
 }
-h2{
+
+.scoreboard {
+    border: 3px solid rgba(12, 12, 12, 0.9);
+    height: 580px;
+    border-radius: 9px;
+    background: url('/assets/bg6.jpg');
+    background-opacity: 0.6;
+    padding: 10px;
+}
+
+h2 {
     font-family: helvetica;
-    font-size:34px;
-    margin-left:50px;
-    margin-top:0px;	}
-.buttons {
-    margin-left:40px;
-    color:rgba(0,0,0,0);
+    font-size: 34px;
+    margin-left: 50px;
+    margin-top: 0px;
 }
+
+.buttons {
+    margin-left: 40px;
+    color: rgba(0, 0, 0, 0);
+}
+
 fieldset {
     box-shadow: 2px 2px 2px;
-    background-color: rgba(121,101,56,0.9);
-    border:3px solid;
+    background-color: rgba(121, 101, 56, 0.9);
+    border: 3px solid;
 }
+
 legend {
-    color:black;
-    text-shadow:2px 2px 2px;
-    font-family:Helvetica;
+    color: black;
+    text-shadow: 2px 2px 2px;
+    font-family: Helvetica;
 }
 
 button:active {
     -webkit-box-shadow: 0px 2px 0px black;
     -moz-box-shadow: 0px 2px 0px black;
     box-shadow: 0px 2px 0px black;
-    position:relative;
-    top:4px;
+    position: relative;
+    top: 4px;
 }
-h2 { 
-    background-color:rgba(121,222,121,0.6);
-    text-align:center;
+
+h2 {
+    background-color: rgba(121, 222, 121, 0.6);
+    text-align: center;
     margin-left: 5px;
     text-shadow: 2px 2px 2px black;
-    color:rgba(222,180,111,1);
-    outline:1px;
+    color: rgba(222, 180, 111, 1);
+    outline: 1px;
 }
+
 button {
-    width:60px;
-    height: 53px;;
+    width: 60px;
+    height: 53px;
+    ;
     font-size: 33px;
-    outline:none;
+    outline: none;
     box-shadow: 2px 2px 2px black;
-    border:0px;
-
-    color:white;
+    border: 0px;
+    color: white;
     border-radius: 9px;
-    background-color:rgba(100,181,153,0.9);
+    background-color: rgba(100, 181, 153, 0.9);
 }
-.blockR {
-    position:relative;
-    width:450px;
 
-    background-color: rgb(139,69,19);
-    height:13px;
-    left:0px;
-}	
+.blockR {
+    position: relative;
+    width: 450px;
+    background-color: rgb(139, 69, 19);
+    height: 13px;
+    left: 0px;
+}
 
 .blockU {
-    position:relative;
-    height:150px;
-    background-color:rgb(139,69,19);
-    width:13px;
-    left:437px;
+    position: relative;
+    height: 150px;
+    background-color: rgb(139, 69, 19);
+    width: 13px;
+    left: 437px;
 }
+
 input p {
-    color:white;
+    color: white;
 }
-p {	
-    text-shadow:1px 1px 1px;
+
+p {
+    text-shadow: 1px 1px 1px;
 }
+
 input {
-    border:0px;
-    outline:0px;
-    border-radius:18px;
-    padding:3px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 18px;
+    padding: 3px;
     font-weight: bolder;
 }
+
 body {
-    position:relative;
+    position: relative;
     background-size: cover;
-} 
+}
 
 .ball {
-    left:0px;
-    top:0px;
+    left: 0px;
+    top: 0px;
     position: relative;
-    width:90px;
+    width: 90px;
 }
+
 #block1 {
-    position:absolute;
-    left:513px;
-    top:0px;
-    height:130px;
+    position: absolute;
+    left: 513px;
+    top: 0px;
+    height: 130px;
 }
+
 #block3 {
-    left:600px;
-    top:160px;
-    width:160px;
+    left: 600px;
+    top: 160px;
+    width: 160px;
     position: absolute;
 }
-#block4 {
-    left:600px;
-    top:60px;
 
+#block4 {
+    left: 600px;
+    top: 60px;
     position: absolute;
 }
 
 #block6 {
     position: absolute;
-    top:60px;
-    width:150px;
-    left:750px;
+    top: 60px;
+    width: 150px;
+    left: 750px;
 }
+
 #block7 {
     position: absolute;
-    left:890px;
-    top:0px;
+    left: 890px;
+    top: 0px;
 }
+
 #block8 {
     position: absolute;
-    left:582px;
-    width:454px;
-    top:300px;
+    left: 582px;
+    width: 454px;
+    top: 300px;
 }
 
 #block9 {
     position: absolute;
-    left:437px;
-    top:200px;
-    width:176px;
+    left: 437px;
+    top: 200px;
+    width: 176px;
 }
+
 #block10 {
-    height:100px;
-    left:570px;
-    top:300px;
+    height: 100px;
+    left: 570px;
+    top: 300px;
     position: absolute;
 }
+
 #block11 {
-    left:483px;
-    top:400px;
-    width:100px;
+    left: 483px;
+    top: 400px;
+    width: 100px;
     position: absolute;
 }
+
 #block12 {
-    left:480px;
-    top:301px;
-    height:110px;
+    left: 480px;
+    top: 301px;
+    height: 110px;
     position: absolute;
 }
+
 #block13 {
     position: absolute;
-    left:333px;
-    top:300px;
-    width:160px;
+    left: 333px;
+    top: 300px;
+    width: 160px;
 }
+
 #block14 {
     position: absolute;
-    left:330px;
-    top:210px;
+    left: 330px;
+    top: 210px;
 }
+
 #block15 {
     position: absolute;
-    left:100px;
-    top:130px;
-    width:200px;
+    left: 100px;
+    top: 130px;
+    width: 200px;
 }
+
 #block16 {
-    left:100px;
-    height:100px;
-    top:100px;
+    left: 100px;
+    height: 100px;
+    top: 100px;
     position: absolute;
 }
+
 #block17 {
-    width:100px;
-    left:240px;
-    top:240px;
+    width: 100px;
+    left: 240px;
+    top: 240px;
     position: absolute;
 }
 
 #block18 {
-    width:113px;
-    left:00px;
-    top:190px;
+    width: 113px;
+    left: 00px;
+    top: 190px;
     position: absolute;
 }
+
 #block19 {
-    width:113px;
-    left:100px;
-    top:330px;
+    width: 113px;
+    left: 100px;
+    top: 330px;
     position: absolute;
 }
+
 #block20 {
     position: absolute;
-    top:300px;
-    left:100px;
+    top: 300px;
+    left: 100px;
 }
+
 #block21 {
     position: absolute;
-    left:00px;
-    top:440px;
-    width:113px;
+    left: 00px;
+    top: 440px;
+    width: 113px;
 }
+
 #block22 {
     position: absolute;
-    left:450px;
-    top:400px;
-    width:50px;
+    left: 450px;
+    top: 400px;
+    width: 50px;
 }
+
 #block23 {
     position: absolute;
-    top:450px;
-    left:219px;
-    height:80px;
+    top: 450px;
+    left: 219px;
+    height: 80px;
 }
+
 #block24 {
     position: absolute;
-    left:230px;
-    top:450px;
-    width:133px;
+    left: 230px;
+    top: 450px;
+    width: 133px;
 }
+
 #block25 {
     position: absolute;
-    left:360px;
-    top:430px;
-    height:60px;
+    left: 360px;
+    top: 430px;
+    height: 60px;
 }
+
 #block26 {
     position: absolute;
-    left:0px;
-    top:530px;
-    width:80px;
+    left: 0px;
+    top: 530px;
+    width: 80px;
 }
+
 #block27 {
     position: absolute;
-    left:470px;
+    left: 470px;
     height: 96px;
-    top:500px;
+    top: 500px;
 }
+
 #block28 {
     position: absolute;
-    left:470px;
-    top:490px;
-    width:190px;
+    left: 470px;
+    top: 490px;
+    width: 190px;
 }
+
 #block29 {
     position: absolute;
-    left:650px;
-    top:470px;
-    height:60px;
+    left: 650px;
+    top: 470px;
+    height: 60px;
 }
+
 #block30 {
     position: absolute;
-    left:690px;
-    top:380px;
+    left: 690px;
+    top: 380px;
     width: 150px;
 }
+
 #block31 {
     position: absolute;
-    left:750px;
-    height:130px;
-    top:390px;
+    left: 750px;
+    height: 130px;
+    top: 390px;
 }
+
 #block32 {
     position: absolute;
-    left:890px;
-    top:460px;
-    width:100px;
+    left: 890px;
+    top: 460px;
+    width: 100px;
 }
+
 #block33 {
     position: absolute;
-    left:700px;
-    top:583px;
-    width:100px;
+    left: 700px;
+    top: 583px;
+    width: 100px;
 }
+
 #block {
-    left:430px;
-    height:132px;
+    left: 430px;
+    height: 132px;
 }
+
 #block0 {
-    width:443px;
+    width: 443px;
 }
+
 .dest {
-    width:60px;
-    height:60px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    left:975px;
-    top:535px;
+    left: 975px;
+    top: 535px;
     border-radius: 9px;
     background-color: black;
 }
