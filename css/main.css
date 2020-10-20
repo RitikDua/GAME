@@ -1,5 +1,5 @@
 body {
-    background-image: url('/assets/bg5.jpg');
+    background-image: url('../assets/bg5.jpg');
 }
 
 .container {
@@ -8,7 +8,7 @@ body {
     border: 3px solid rgba(12, 12, 12, 0.9);
     background-size: cover;
     width: 99%;
-    background-image: url('/assets/bg1.jpg');
+    background-image: url('../assets/bg1.jpg');
     background-color: rgba(101, 200, 112, 0.9);
     height: 596px;
     padding: 0px;
@@ -19,7 +19,7 @@ body {
     border: 3px solid rgba(12, 12, 12, 0.9);
     height: 580px;
     border-radius: 9px;
-    background: url('/assets/bg6.jpg');
+    background: url('../assets/bg6.jpg');
     background-opacity: 0.6;
     padding: 10px;
 }
